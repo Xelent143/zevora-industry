@@ -66,6 +66,9 @@ const Footer = () => {
                 </div>
                 <div className="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-xs text-gray-500">© 2026 Zevora Industry. All rights reserved.</p>
+                    <p className="text-xs text-gray-500">
+                        Designed and Developed by <a href="https://sialkotaimasters.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">Sialkot Ai Masters</a>
+                    </p>
                 </div>
             </div>
         </footer>

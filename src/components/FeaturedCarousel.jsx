@@ -19,18 +19,33 @@ const FeaturedCarousel = () => {
     useEffect(() => {
         const loadFeatured = async () => {
             try {
-                // Fetch first 8 products as featured
-                const data = await fetchProducts(1, 8, null, true); // page, perPage, category, FEATURED=true
+                // Attempt 1: Fetch Featured Products
+                let data = await fetchProducts(1, 8, null, true);
+
+                // Attempt 2: If no featured products found, fetch Latest Products
+                if (!data || data.length === 0) {
+                    console.warn("No featured products found, fetching latest instead...");
+                    data = await fetchProducts(1, 8, null, null);
+                }
+
                 if (data && data.length > 0) {
                     setProducts(data);
                 } else {
-                    // Fallback mock data if API returns empty
-                    console.warn("API returned no products, using fallback data");
                     setProducts(MOCK_PRODUCTS);
                 }
             } catch (err) {
-                console.error("Failed to load featured products, using fallback", err);
-                setProducts(MOCK_PRODUCTS);
+                console.error("Failed to load featured products, trying latest...", err);
+                try {
+                    // Failover: Try fetching latest products on error
+                    const data = await fetchProducts(1, 8, null, null);
+                    if (data && data.length > 0) {
+                        setProducts(data);
+                    } else {
+                        setProducts(MOCK_PRODUCTS);
+                    }
+                } catch (e) {
+                    setProducts(MOCK_PRODUCTS);
+                }
             } finally {
                 setLoading(false);
             }
