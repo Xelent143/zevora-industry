@@ -42,6 +42,28 @@ export const updateProduct = async (id, data) => {
     }
 };
 
+export const createProduct = async (data) => {
+    try {
+        const response = await api.post('/products', data);
+        return response.data;
+    } catch (error) {
+        console.error('Error creating product:', error);
+        throw error;
+    }
+};
+
+export const deleteProduct = async (id) => {
+    try {
+        const response = await api.delete(`/products/${id}`, {
+            params: { force: true } // Force delete to bypass trash
+        });
+        return response.data;
+    } catch (error) {
+        console.error(`Error deleting product ${id}:`, error);
+        throw error;
+    }
+};
+
 export const fetchCategories = async () => {
     try {
         const response = await api.get('/products/categories', {

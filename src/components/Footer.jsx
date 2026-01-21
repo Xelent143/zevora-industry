@@ -7,9 +7,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="grid md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-1">
-                        <div className="flex items-center gap-3 mb-6">
-                            <img src="/images/logo.png" alt="ZEVORA" className="h-12 w-auto" />
-                        </div>
+
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">Defining the standards of leather glove manufacturing. Quality, durability, and craftsmanship in every stitch.</p>
                         <div className="flex gap-4">
                             {/* Social Media Links - using placeholders or generic structure */}

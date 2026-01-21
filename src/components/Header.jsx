@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
-            <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+        <header className="fixed top-0 w-full z-50 bg-white backdrop-blur-sm border-b border-gray-100 shadow-sm">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10 h-28 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-2 group">
-                    <img src="/images/logo.png" alt="Zevora Industry" className="h-10 w-auto" />
+                    <img src="/images/logo-zevora.png" alt="Zevora Industry" className="h-[80px] w-[160px] object-contain" />
                 </Link>
                 <nav className="hidden lg:flex items-center gap-8">
                     <Link className="text-[#334155] text-sm font-semibold hover:text-primary transition-colors nav-link-underline" to="/">Home</Link>
