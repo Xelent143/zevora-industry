@@ -4,6 +4,13 @@
  */
 
 // 1. Enqueue Scripts & Styles
+function add_cors_http_header(){
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+    header("Access-Control-Allow-Headers: Authorization, Content-Type, X-Requested-With");
+}
+add_action('init','add_cors_http_header');
+
 function react_theme_enqueue_scripts() {
     // Load the React Build's JS and CSS
     // We scan the 'assets' folder to dynamically find the hashed filenames

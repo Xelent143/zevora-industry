@@ -137,7 +137,7 @@ const ProductDetails = () => {
                                 <ShoppingBag className="w-5 h-5" /> Add to Quote
                             </button>
                             <a
-                                href={`https://wa.me/923177350946?text=Hi, I'm interested in ${encodeURIComponent(product.name)}`}
+                                href={`https://wa.me/923006130802?text=Hi, I'm interested in ${encodeURIComponent(product.name)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex-1 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg shadow-green-200 transition-all flex items-center justify-center gap-2"

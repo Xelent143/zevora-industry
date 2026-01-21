@@ -90,8 +90,8 @@ const TechnicalSupport = () => {
                         <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                             <h3 className="font-bold text-blue-900 mb-2">Need Immediate Help?</h3>
                             <p className="text-sm text-blue-800 mb-4">Our engineers are available Mon-Fri, 9am - 5pm EST.</p>
-                            <a href="tel:+923177350946" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:text-blue-900">
-                                Call +92 317 7350946
+                            <a href="tel:+923006130802" className="inline-flex items-center gap-2 text-blue-700 font-bold hover:text-blue-900">
+                                Call +92 300 6130802
                             </a>
                         </div>
                     </div>
